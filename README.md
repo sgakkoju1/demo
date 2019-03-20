@@ -5,26 +5,27 @@ demo project
 ----
 https://www.toolsqa.com/rest-assured/post-request-using-rest-assured/
 
+https://stackoverflow.com/questions/4205980/java-sending-http-parameters-via-post-method-easily
 
 
-@Test
-public void RegistrationSuccessful()
-{ 
- RestAssured.baseURI ="http://restapi.demoqa.com/customer";
- RequestSpecification request = RestAssured.given();
- 
- JSONObject requestParams = new JSONObject();
- requestParams.put("FirstName", "Virender"); // Cast
- requestParams.put("LastName", "Singh");
- requestParams.put("UserName", "sdimpleuser2dd2011");
- requestParams.put("Password", "password1");
- 
- requestParams.put("Email",  "sample2ee26d9@gmail.com");
- request.body(requestParams.toJSONString());
- Response response = request.post("/register");
- 
- int statusCode = response.getStatusCode();
- Assert.assertEquals(statusCode, "201");
- String successCode = response.jsonPath().get("SuccessCode");
- Assert.assertEquals( "Correct Success code was returned", successCode, "OPERATION_SUCCESS");
-}
+// send params with Hash Map
+    HashMap<String, String> params = new HashMap<String, String>();
+    params.put("email","me@example.com");
+    params.put("password","12345");
+
+    //server url
+    String url = "http://www.example.com";
+
+    // static class "HttpUtility" with static method "newRequest(url,method,callback)"
+    HttpUtility.newRequest(url,HttpUtility.METHOD_POST,params, new HttpUtility.Callback() {
+        @Override
+        public void OnSuccess(String response) {
+        // on success
+           System.out.println("Server OnSuccess response="+response);
+        }
+        @Override
+        public void OnError(int status_code, String message) {
+        // on error
+              System.out.println("Server OnError status_code="+status_code+" message="+message);
+        }
+    });
