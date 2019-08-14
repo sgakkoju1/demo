@@ -1,18 +1,6 @@
 # demo
 demo project
 
-Prior implementing the harness. We need to engage with dev team/architect, Business User and qa to create Test Approach and have team agreements. 
-- what type of data can be used to test
-- What volume of data should be used 
-- Identify the usage of application when in prod(wrt to number is users accessing)
-- Coverage of Positive and Negative scenarios
-- Identify the Date1 scenarios
-- Identify Date roll scenarios
-- Identity High Availability and Fault Tolerance scenarios 
-- Identify failover scenarios
-- Identify peak loads and simulate through harness 
-
-
 
 ----
 https://www.toolsqa.com/rest-assured/post-request-using-rest-assured/
