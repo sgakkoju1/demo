@@ -1,7 +1,7 @@
 pipeline {
-    agent {
-        label 'linux'
-    }
+ //   agent {
+ //       label 'linux'
+//    }
     options {
         buildDiscarder (logRotator(daysToKeepStr: '100', numToKeepStr: '100'))
     }
