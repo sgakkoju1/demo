@@ -28,10 +28,10 @@ pipeline {
                 deleteDir()
             }
             success {
-                emailext body: 'SUCCESS', to: 'gsridharmsc@gmail.com'
+                emailext body: 'SUCCESS', subject: '$BUILD_NUMBER - SUCCESS', to: 'gsridharmsc@gmail.com'
             }
             failure {
-                emailext body: 'FAILURE', to: 'gsridharmsc@gmail.com'
+                emailext body: 'FAILURE', subject: '$BUILD_NUMBER - FAILURE', to: 'gsridharmsc@gmail.com'
             }
             
         }
