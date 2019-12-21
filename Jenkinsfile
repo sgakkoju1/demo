@@ -1,3 +1,5 @@
+@Library('pipeline-library-demo')_
+
 pipeline {
     agent any
  
@@ -6,6 +8,12 @@ pipeline {
     }
     
     stages {
+        
+        stage('DemoFromLibrary') {
+            echo 'Hello world'
+            sayHello 'Dave'
+            }        
+        
         stage('Build') {
             steps {
                 script {
