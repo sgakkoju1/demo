@@ -33,7 +33,7 @@ pipeline {
          }
         }        
      
-     devPipeline.groovy
+     devPipeline
         
 //        stage('Build') {
 //            steps {
