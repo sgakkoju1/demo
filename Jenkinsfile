@@ -28,12 +28,13 @@ pipeline {
            echo 'call function number with null passing null value: 5'
            sayHello ''
            
-           
+           echo 'Start Build and Test Stages from the Library'
+           devPipeline          
           }
          }
         }        
      
-     devPipeline
+     
         
 //        stage('Build') {
 //            steps {
