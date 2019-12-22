@@ -32,6 +32,8 @@ pipeline {
           }
          }
         }        
+     
+     devPipeline.groovy
         
 //        stage('Build') {
 //            steps {
