@@ -1,5 +1,7 @@
  @Library('pipeline-library-demo')_
 
+devPipeline
+
 pipeline {
     agent any
  
@@ -29,7 +31,7 @@ pipeline {
            sayHello ''
            
            echo 'Start Build and Test Stages from the Library'
-           devPipeline          
+                     
           }
          }
         }        
