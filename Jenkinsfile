@@ -12,8 +12,23 @@ pipeline {
         stage('DemoFromLibrary') {
          steps {
           script {
-            echo 'Hello world'
+            echo 'Using Shared Libraries using Jenkins'
+           echo 'call function number : 1'
             sayHello 'Dave'
+           
+           echo 'call function number : 2'
+           sayHello 'Sridhar'
+           
+           echo 'call function number : 3'
+           sayHello 'Gakkoju'
+           
+           echo 'call function number with no passing parameter: 4'
+           sayHello 
+           
+           echo 'call function number with null passing null value: 5'
+           sayHello ''
+           
+           
           }
          }
         }        
