@@ -1,4 +1,4 @@
-// @Library('pipeline-library-demo')_
+ @Library('pipeline-library-demo')_
 
 pipeline {
     agent any
@@ -9,10 +9,10 @@ pipeline {
     
     stages {
         
-//        stage('DemoFromLibrary') {
-//            echo 'Hello world'
-//            sayHello 'Dave'
-//            }        
+        stage('DemoFromLibrary') {
+            echo 'Hello world'
+            sayHello 'Dave'
+            }        
         
         stage('Build') {
             steps {
