@@ -10,9 +10,13 @@ pipeline {
     stages {
         
         stage('DemoFromLibrary') {
+         steps {
+          script {
             echo 'Hello world'
             sayHello 'Dave'
-            }        
+          }
+         }
+        }        
         
         stage('Build') {
             steps {
